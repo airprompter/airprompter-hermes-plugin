@@ -23,7 +23,11 @@ local skill flow and skip AirPrompter tools.
 ### Design, preview, and save
 
 1. For a new workflow or skill on the selected account, call `plan_draft`
-   first. Send `target: workflow` and put the user's request in `instruction`.
+   first. Unless the user already asked to use AirPrompter, first say that the
+   request goes to their AirPrompter account to plan it, and continue only if
+   they agree; if not, sketch the preview locally. Send `target: workflow` and
+   put only the user's request in `instruction`, never secrets or unrelated
+   conversation.
    If the host defers tools, search for the exact name `plan_draft`. Describe
    and call the returned tool using its full name and arguments. For Hermes
    Tool Search, pass `calls: [{name, arguments}]` to `tool_call`.
