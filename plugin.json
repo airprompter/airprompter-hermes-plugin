@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "airprompter",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "AirPrompter connects Hermes to your saved prompt and workflow library. AirPrompter keeps a record of each run, including your inputs, step status, timing, and token counts; the README explains what is recorded.",
   "author": {
     "name": "AirPrompter",
